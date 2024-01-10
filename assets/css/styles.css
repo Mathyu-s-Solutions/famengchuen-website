@@ -431,6 +431,7 @@ input {
 
 .about__description {
   margin-bottom: var(--mb-2);
+  text-align: justify;
 }
 
 .about__img {
