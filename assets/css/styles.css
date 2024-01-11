@@ -1454,7 +1454,6 @@ input {
 
 .container_programs {
   font-size: 1.6rem;
-  background: var(--bg);
 }
 
 .container {
@@ -1530,13 +1529,13 @@ input {
 .tranding-slide-content .food-price {
   position: absolute;
   top: 2rem;
-  right: 19rem;
+  right: 21rem;
   color: var(--white);
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
-  bottom: 10rem;
+  bottom: 12rem;
   left: 2rem;
   color: var(--white);
 }
