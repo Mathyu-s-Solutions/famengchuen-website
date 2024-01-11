@@ -51,38 +51,29 @@ let swiper = new Swiper(".discover__container", {
     },
 })
 
-/*==================== VIDEO ====================*/
-const videoFile = document.getElementById('video-file'),
-      videoButton = document.getElementById('video-button'),
-      videoIcon = document.getElementById('video-icon')
+/*==================== PROGRAMS ====================*/
 
-function playPause(){ 
-    if (videoFile.paused){
-        // Play video
-        videoFile.play()
-        // We change the icon
-        videoIcon.classList.add('ri-pause-line')
-        videoIcon.classList.remove('ri-play-line')
+var TrandingSlider = new Swiper('.tranding-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     }
-    else {
-        // Pause video
-        videoFile.pause(); 
-        // We change the icon
-        videoIcon.classList.remove('ri-pause-line')
-        videoIcon.classList.add('ri-play-line')
-
-    }
-}
-videoButton.addEventListener('click', playPause)
-
-function finalVideo(){
-    // Video ends, icon change
-    videoIcon.classList.remove('ri-pause-line')
-    videoIcon.classList.add('ri-play-line')
-}
-// ended, when the video ends
-videoFile.addEventListener('ended', finalVideo)
-
+  });
 
 /*==================== SHOW SCROLL UP ====================*/ 
 function scrollUp(){
