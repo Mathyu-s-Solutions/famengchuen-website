@@ -22,6 +22,9 @@
   --white-color: #FFF;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  --container-color: hsl(0, 0%, 85%);
+  --border-color: hsl(var(--hue-color), 64%, 22%, 0.77);
+
 
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
@@ -80,6 +83,8 @@ body.dark-theme {
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
   --text-color-light: #eeeeee;
+  --container-color: hsl(0, 0%, 23%);
+  --border-color: hsl(230, 12%, 8%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -799,10 +804,6 @@ input {
 }
 
 /*=============== CONTACT ===============*/
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
 
 .contact {
   position: relative;
@@ -1029,6 +1030,24 @@ input {
   .video__container {
     padding: 0;
   }
+
+  .members__card {
+    width: 90%;
+    margin: 0;
+  }
+
+  .members__container .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next{
+    right: 5px;
+  }
+  .swiper-button-prev{
+    left: 5px;
+  }
 }
 
 /* For medium devices */
@@ -1045,6 +1064,7 @@ input {
     width: 470px;
     margin: 0 auto;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1159,6 +1179,9 @@ input {
     flex-direction: row;
     justify-content: space-between;
   }
+
+
+
 }
 
 /* For large devices */
@@ -1232,6 +1255,14 @@ input {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1024px;
+  }
+
+  .members__container{
+    padding-top: 2rem;
+  }
+
+  .members__title{
+    font-size: var(--h3-font-size);
   }
 }
 
@@ -1342,12 +1373,19 @@ input {
   color: var(--text-color-light);
   font-size: var(--body-font);
 }
-@media screen and (max-width: 1000px) {
+
+
+@media screen and (max-width: 1200px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
+
+  .wrapper{
+    width: 70%;
+  }
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
   }
