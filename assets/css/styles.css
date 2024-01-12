@@ -1498,22 +1498,30 @@ input {
   width: 35rem;
   height: 40rem;
   position: relative;
+  left: 6rem;
 }
 
 @media (max-width:500px) {
   .tranding-slide {
     width: 28rem !important;
-    height: 36rem !important;
+    height: 28rem !important;
+    left: 4rem;
   }
   .tranding-slide .tranding-slide-img img {
     width: 20rem !important;
-    height: 30rem !important;
+    height: 20rem !important;
+  }
+  .tranding-slider-control {
+    bottom: 23rem;
+  }
+  .tranding-slide-content .food-price {
+    right: 18rem;
   }
 }
 
 .tranding-slide .tranding-slide-img img {
   width: 25rem;
-  height: 27rem;
+  height: 25rem;
   border-radius: 2rem;
   object-fit: fill;
 }
@@ -1529,7 +1537,7 @@ input {
 .tranding-slide-content .food-price {
   position: absolute;
   top: 2rem;
-  right: 21rem;
+  right: 55%;
   color: var(--white);
 }
 
