@@ -1483,14 +1483,14 @@ input {
 }
 
 #tranding .tranding-slider {
-  height: 39rem;
+  height: 29rem;
   padding: 2rem 0;
   position: relative;
 }
 
 @media (max-width:500px) {
   #tranding .tranding-slider {
-    height: 45rem;
+    height: 25rem;
   }
 }
 
@@ -1498,21 +1498,21 @@ input {
   width: 35rem;
   height: 40rem;
   position: relative;
-  left: 6rem;
+  left: 9rem;
 }
 
 @media (max-width:500px) {
   .tranding-slide {
     width: 28rem !important;
     height: 28rem !important;
-    left: 4rem;
+    left: 7rem;
   }
   .tranding-slide .tranding-slide-img img {
-    width: 20rem !important;
-    height: 20rem !important;
+    width: 13rem !important;
+    height: 13rem !important;
   }
   .tranding-slider-control {
-    bottom: 23rem;
+    bottom: 1rem;
   }
   .tranding-slide-content .food-price {
     right: 18rem;
@@ -1520,8 +1520,8 @@ input {
 }
 
 .tranding-slide .tranding-slide-img img {
-  width: 25rem;
-  height: 25rem;
+  width: 18rem;
+  height: 18rem;
   border-radius: 2rem;
   object-fit: fill;
 }
@@ -1543,9 +1543,15 @@ input {
 
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
-  bottom: 5.5rem;
+  bottom: 4.3rem;
   left: 2rem;
   color: var(--white);
+  font-size: var(--h3-font-size);
+}
+@media (max-width:500px) {
+  .tranding-slide-content .tranding-slide-content-bottom {
+    bottom: 12rem;
+  }
 }
 
 .food-rating {
@@ -1606,8 +1612,8 @@ input {
 
 .tranding-slider-control .slider-arrow {
   background: var(--white);
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   left: 42%;
   transform: translateX(-42%);
