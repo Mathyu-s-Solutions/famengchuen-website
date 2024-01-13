@@ -1369,7 +1369,7 @@ input {
   scroll-snap-align: start;
   height: 342px;
   list-style: none;
-  background: var(--first-color-second);
+  background: #333333;
   cursor: pointer;
   padding-bottom: 15px;
   flex-direction: column;
