@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Fa Meng Chuen — design tokens (from the Claude Design handoff)
+   ============================================================ */
+@theme {
+  /* Surfaces / backgrounds */
+  --color-base: #0a0a0b;
+  --color-alt: #0c0c0e;
+  --color-footer: #070708;
+  --color-surface: #141417;
+  --color-surface-warm: #1a1411;
+  --color-ink: #08080a;
+
+  /* Text */
+  --color-cream: #f4f1ea;
+  --color-cream-2: #e9e4da;
+  --color-sand: #cfc9bf;
+  --color-secondary: #c8c2b8;
+  --color-muted: #a8a39a;
+  --color-dim: #9b958b;
+  --color-dimmer: #7d786f;
+  --color-faint: #5f5b54;
+
+  /* Brand accents */
+  --color-red: #d81f26;
+  --color-red-hi: #f02630;
+  --color-gold: #e3b23c;
+  --color-gold-deep: #caa033;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-ink: #073b1e;
+
+  /* Hairlines */
+  --color-line: rgba(244, 241, 234, 0.1);
+  --color-line-12: rgba(244, 241, 234, 0.12);
+  --color-line-14: rgba(244, 241, 234, 0.14);
+
+  /* Fonts (wired to next/font CSS variables set on <html>) */
+  --font-display: var(--font-anton), "Anton", sans-serif;
+  --font-label: var(--font-oswald), "Oswald", sans-serif;
+  --font-body: var(--font-barlow), "Barlow", system-ui, sans-serif;
+
+  /* Layout */
+  --spacing-content: 1180px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  body {
+    background: var(--color-base);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--color-red);
+    color: #fff;
+  }
+}
+
+/* Loader / floating-button keyframes (CSS-driven, animation library free) */
+@keyframes fmc-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+}
+@keyframes fmc-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.fmc-pulse {
+  animation: fmc-pulse 2.4s infinite;
+}
+
+/* Decorative floating crane (logo) — disabled when the user prefers less motion */
+.fmc-crane {
+  animation: fmc-float 6s ease-in-out infinite;
+}
+.fmc-crane--slow {
+  animation-duration: 7.2s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fmc-crane,
+  .fmc-pulse {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
