@@ -16,7 +16,7 @@ const CREDENTIALS = [
     sub: "Defensa personal para mujeres",
   },
   {
-    title: "Instructor en la Escuela de Suboficiales de la PNP",
+    title: "Ex instructor de la Escuela de Suboficiales de la PNP",
     sub: "y programas de capacitación con el MINSA",
   },
 ];
